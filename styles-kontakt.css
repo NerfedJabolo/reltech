@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background-color: #d3d3d3;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left a {
+  display: block;
+}
+
+.navbar-brand {
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.navbar-right ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-right ul li {
+  margin-right: 2rem;
+}
+
+.navbar-right ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar-right ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.parent {
+  padding-left: 3rem;
+  background-color: #888;
+  display: flex;
+  width: 60%;
+  /* margin: 0 auto; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.child {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  height: fit-content;
+}
+
+.child p {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.left {
+  width: 50%;
+  /* background-color: #ccc; Set background color for the left child */
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  /* background-color: #aaa; Set background color for the right child */
+}
+
+.right img {
+  max-height: 100%; /* Set the max height of the image to 100% of the parent div height */
+  object-fit: contain; /* Scale the image down while preserving its aspect ratio */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+  .parent {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 45%;
+  }
+  .parent {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+  .parent {
+    width: 90%;
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 35%;
+  }
+  .parent {
+    width: 100%;
+  }
+}

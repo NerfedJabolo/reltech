@@ -1,0 +1,15 @@
+{
+  "name": "reltech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "minify-css": "css-minify -f styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-minify": "^2.0.0"
+  }
+}
