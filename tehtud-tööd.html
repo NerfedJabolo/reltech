@@ -1,13 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles-tehtud-tööd.css">
-    <title>Document</title>
-</head>
-<body>
-</body>
+<html>
+  <head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles-tehtud-tööd.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar-left">
+        <span class="navbar-brand">RelTech OÜ</span>
+      </div>
+      <div class="navbar-right">
+        <ul>
+          <li><a href="#">Teenused</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="tehtud-tööd.html">Tehtud tööd</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="tööd">
+      <h1>Tehtud tööd</h1>
+      <div class="tööd-container">
+        <img src="./imgs/work_example.jpeg" alt="" />
+        <div class="tööd-description">
+          <h2>Tehtud töö 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quae.
+          </p>
+        </div>
+      </div>
+      <div class="tööd-container">
+        <img src="./imgs/work_example.jpeg" alt="" />
+        <div class="tööd-description">
+          <h2>Tehtud töö 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quae.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay">
+      <button class="close-button">Close</button>
+      <div class="overlay-wrapper">
+        <div class="overlay-content">
+          <div class="carousel-container">
+            <div><img src="./imgs/mootor.jpg" /></div>
+            <div><img src="./imgs/image2.jpg" /></div>
+            <div><img src="./imgs/image3.jpg" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const overlay = document.querySelector(".overlay");
+      const images = document.querySelectorAll(".tööd-container img");
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          overlay.style.display = "block";
+        });
+      });
+
+      const closeButton = document.querySelector(".close-button");
+      const overlayWrapper = document.querySelector(".overlay-wrapper");
+
+      closeButton.addEventListener("click", () => {
+        overlay.style.display = "none";
+      });
+
+      overlayWrapper.addEventListener("click", (e) => {
+        e.stopPropagation()
+        overlay.style.display = "none";
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          overlay.style.display = "none";
+        }
+      });
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript">
+      // Get the carousel container element
+      var carousel = document.querySelector(".carousel-container");
+
+      // Initialize Slick Carousel
+      $(carousel).slick({
+        autoplay: true,
+        arrows: true,
+        dots: true,
+      });
+    </script>
+  </body>
 </html>
-  

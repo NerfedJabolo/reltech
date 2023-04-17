@@ -8,6 +8,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: rgb(38, 40, 38);
 }
 
 h1 {
@@ -40,6 +41,7 @@ nav {
 
 .navbar-left a {
   display: block;
+  text-decoration: none;
 }
 
 .navbar-brand {
@@ -72,6 +74,7 @@ nav {
 }
 
 .parent {
+  border-radius: 25px;
   padding-left: 3rem;
   background-color: #888;
   display: flex;
@@ -108,8 +111,15 @@ nav {
 }
 
 .right img {
+  border-radius: 20px;
   max-height: 100%; /* Set the max height of the image to 100% of the parent div height */
   object-fit: contain; /* Scale the image down while preserving its aspect ratio */
+  transition: all 0.7s ease;
+
+}
+
+.right img:hover {
+  transform: scale(1.1);
 }
 
 html {
